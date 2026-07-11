@@ -140,24 +140,26 @@ export const GameUI: React.FC<GameUIProps> = ({
               </div>
             </div>
 
-            <button className="btn btn-primary" onClick={() => onStartGame(initialSpeed, complexity)}>
-              <Play size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
-              Iniciar Misión
-            </button>
+            <div className="menu-buttons">
+              <button className="btn btn-primary" onClick={() => onStartGame(initialSpeed, complexity)}>
+                <Play size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
+                Iniciar Misión
+              </button>
 
-            <button className="btn btn-secondary" onClick={onToggleMute}>
-              {mute ? (
-                <>
-                  <VolumeX size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
-                  Activar Sonido
-                </>
-              ) : (
-                <>
-                  <Volume2 size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
-                  Desactivar Sonido
-                </>
-              )}
-            </button>
+              <button className="btn btn-secondary" onClick={onToggleMute}>
+                {mute ? (
+                  <>
+                    <VolumeX size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
+                    Sonido: Off
+                  </>
+                ) : (
+                  <>
+                    <Volume2 size={18} style={{ marginRight: 8, verticalAlign: "middle" }} />
+                    Sonido: On
+                  </>
+                )}
+              </button>
+            </div>
 
             <div className="instructions">
               <p style={{ fontWeight: "bold", color: "#fff", marginBottom: "0.5rem" }}>
